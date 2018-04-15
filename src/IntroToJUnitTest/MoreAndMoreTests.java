@@ -10,52 +10,49 @@ import org.junit.Test;
 
 public class MoreAndMoreTests {
 
-//	@Test
-//	  public void MultTest() {
-//
-//	    assertEquals("10 x 0 = 0", multiply(10, 0));
-//	    assertEquals("10 x 10 = 100", multiply(10, 10));
-//	    assertEquals("8 x 11 = 88", multiply(8, 11));
-//	  }
-//
-//	@Test
-//	  public void PrimeTest() {
-//
-//	    assertTrue(isPrime(3));
-//	    assertTrue(isPrime(5));
-//	    assertTrue(isPrime(541));
-//	    assertFalse(isPrime(4));
-//	    assertFalse(isPrime(12));
-//	    assertFalse(isPrime(527));
-//
-//	  }
-//
-//	@Test
-//	  public void SquareTest() {
-//
-//	    assertTrue(isSquare(4));
-//	    assertTrue(isSquare(144));
-//	    assertTrue(isSquare(64));
-//	    assertTrue(isSquare(10201));
-//	    assertTrue(isSquare(1));
-//	    assertFalse(isSquare(3));
-//	    assertFalse(isSquare(22));
-//	    assertFalse(isSquare(143));
-//
-//	  }
-//
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	@Test
+	  public void MultTest() {
+		Runner r = new Runner();
+	    assertEquals("10 x 0 = 0", r.multiply(10, 0));
+	    assertEquals("10 x 10 = 100", r.multiply(10, 10));
+	    assertEquals("8 x 11 = 88", r.multiply(8, 11));
+	  }
+
+	@Test
+	  public void PrimeTest() {
+		Runner r = new Runner();
+	    assertTrue(r.isPrime(3));
+	    assertTrue(r.isPrime(541));
+	    assertFalse(r.isPrime(4));
+	    assertFalse(r.isPrime(12));
+	    assertFalse(r.isPrime(527));
+	  }
+
+	@Test
+	  public void SquareTest() {
+		Runner r = new Runner();
+	    assertTrue(r.isSquare(4));
+	    assertTrue(r.isSquare(144));
+	    assertTrue(r.isSquare(64));
+	    assertTrue(r.isSquare(10201));
+	    assertTrue(r.isSquare(1));
+	    assertFalse(r.isSquare(3));
+	    assertFalse(r.isSquare(22));
+	    assertFalse(r.isSquare(143));
+	  }
+
+	@Test
+	  public void CubeTest() {
+		Runner r = new Runner();
+	    assertTrue(r.isCube(27));
+	    assertTrue(r.isCube(216));
+	    assertTrue(r.isCube(729));
+	    assertTrue(r.isCube(1));
+	    assertFalse(r.isCube(3));
+	    assertFalse(r.isCube(22));
+	    assertFalse(r.isCube(143));
+
+	  }
 
 
 
