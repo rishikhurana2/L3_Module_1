@@ -1,17 +1,17 @@
 package SearchingAndSortingAlgorithms;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Algorithms {
 	public static int findBrokenEgg(List<String> eggs) {
 		return eggs.indexOf("cracked");
 	}
-	
-	//Add other methods here
+
+	// Add other methods here
 	public static int countPearls(List<Boolean> oysters) {
 		return oysters.indexOf(true);
 	}
+
 	public static double findTallest(List<Double> peeps) {
 		double val = Double.MIN_VALUE;
 		for (int i = 0; i < peeps.size(); i++) {
@@ -20,8 +20,9 @@ public class Algorithms {
 			}
 		}
 		return val;
-		
+
 	}
+
 	public static String findLongestWord(List<String> words) {
 		int stringLength = words.get(0).length();
 		for (int i = 0; i < words.size(); i++) {
@@ -32,29 +33,62 @@ public class Algorithms {
 		}
 		return null;
 	}
+
 	public static boolean containsSOS(List<String> messages) {
 		boolean SOS = false;
 		for (int i = 0; i < messages.size(); i++) {
 			if (messages.get(i).equals(" ... --- ... ")) {
 				SOS = true;
 			}
-		} return SOS;
+		}
+		return SOS;
 	}
-	public static ArrayList<Double> sortScores(List<Double> results) {
-		double min = Double.MIN_VALUE;
-		int hold = 0;
-		ArrayList<Double> fin = new ArrayList<Double>();
-		for(int i = 0; i < results.size(); i++) {
-			min = Double.MAX_VALUE;
-			for (int j = i; j < results.size(); j++) {
-				if(results.get(i) < min) {
-					min = results.get(j);
-					hold = j;
+
+	public static List<Double> sortScores(List<Double> results) {
+		boolean swap = true;
+		while (swap) {
+			swap = false;
+			for (int i = 0; i < results.size() - 1; i++) {
+				if (results.get(i) > results.get(i + 1)) {
+					double temp = results.get(i);
+					results.set(i, results.get(i + 1));
+					results.set(i + 1, temp);
+					swap = true;
 				}
 			}
-			fin.add(min);
 		}
-		System.out.println(results);
-		return fin;
+		// for (int i = 0; i < results.size(); i++) {
+		// System.out.println(results.get(i));
+		// }
+		return results;
+	}
+
+	public static List<String> sortDNA(List<String> sequence) {
+		boolean swap = true;
+		while (swap) {
+			swap = false;
+			for (int i = 0; i < sequence.size() - 1; i++) {
+				if (sequence.get(i).length() > sequence.get(i + 1).length()) {
+					String temp = sequence.get(i);
+					sequence.set(i, sequence.get(i + 1));
+					sequence.set(i + 1, temp);
+					swap = true;
+				}
+			}
+		}
+		return sequence;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		boolean swap = true;
+		while (swap) {
+			swap = false;
+			for (int i = 0; i < words.size(); i++) {
+				if (words.get(i).compareTo(words.get(i + 1)) > ) {
+
+				}
+			}
+		}
+		return words;
 	}
 }
