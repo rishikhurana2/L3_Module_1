@@ -80,12 +80,12 @@ public class Algorithms {
 	}
 
 	public static List<String> sortWords(List<String> words) {
-		boolean swap = true;
-		while (swap) {
-			swap = false;
-			for (int i = 0; i < words.size(); i++) {
-				if (words.get(i).compareTo(words.get(i + 1)) > ) {
-
+		for (int i = 0; i < words.size(); i++) {
+			for (int j = i; j < words.size(); j++) {
+				if (words.get(i).compareTo(words.get(j)) > 0) {
+					String temp = words.get(i);
+					words.set(i, words.get(j));
+					words.set(j, temp);
 				}
 			}
 		}
